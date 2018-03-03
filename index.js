@@ -41,10 +41,26 @@ app.post('/move', (request, response) => {
 
   // Response data
   const data = {
-    move: 'left', // one of: ['up','down','left','right']
-    taunt: 'Move ssssnakesssss, get out the way!', // optional, but encouraged!
+    randomMove = Math.floor(Math.random() * (4-1)) + 1)
   }
+    switch (randomMove) {
+    case 1:
+        move: 'up'
+        break;
+      case 2: 
+        move: 'right'
+        break;
+      case 3:
+        move: 'down'
+        break;
+      case 4:
+        move:'left'
+        break;
+      default:
+    move: 'left', // one of: ['up','down','left','right']
 
+  }
+    taunt: 'Move ssssnakesssss, get out the way!', // optional, but encouraged!
   return response.json(data)
 })
 
