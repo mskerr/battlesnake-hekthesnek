@@ -42,20 +42,24 @@ app.post('/start', (request, response) => {
 // Handle POST request to '/move'
 app.post('/move', (request, response) => {
   // NOTE: Do something here to generate your move
-var test = function(){ return Math.floor(Math.random() * 4);
+var test = function(){ 
+	Math.floor(Math.random() * 4);
 
 	if(test===0){
-		return "left";
+		returnMove = "left";
+		break;
 	}
 	if(test===1){
-		return "up";	
+		returnMove  = "up";
+		break;
 	}
 	if(test===2){
-		return "right";
+		returnMove = "right";
 	}
 	if(test===3){
-		return "down";	
+		returnMove = "down";	
 	}
+		      return returnMove;
 	}
 /*
 var data = bottle.request.json;
