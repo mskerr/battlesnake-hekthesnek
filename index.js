@@ -27,9 +27,9 @@ app.post('/start', (request, response) => {
 
   // Response data
   const data = {
-    color: '#DFFF00',
-    head_url: 'http://www.placecage.com/c/200/200', // optional, but encouraged!
-    taunt: "Let's do thisss thang!", // optional, but encouraged!
+    color: '#f27f04',
+    head_url: 'data:image/svg+xml;base64,PHN2ZyBpZD0icm9vdCIgdmlld0JveD0iMCAwIDcyIDcyIiB4bWxucz0iaHR0cDovL3d3dy53My5v%0D%0AcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSAiaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+%0D%0ACiAgPHBhdGggZD0ibSAzOS45LDAgMCw4LjEgOCwwIDAsOCA4LDAgMCw4IDguMSwwIDAsOCA4LDAg%0D%0AMCw4IC04LDAuMSAwLDcuNiAtNy45LDAgLTAuMSwwLjIgMCw3LjggLTcuOSwwIC0wLjEsMC4yIDAs%0D%0ANy44IC04LDAgTCA0MCw3MiAwLDcyIDAsMCAzOS45LDAgWiBNIDMuOCw1OC4xIFoiIC8+Cjwvc3Zn%0D%0APgo=', // optional, but encouraged!
+    taunt: "Sssssseee you ssssoon sssssuckerssss!", // optional, but encouraged!
   }
 
   return response.json(data)
@@ -42,7 +42,7 @@ app.post('/move', (request, response) => {
   // Response data
   const data = {
     move: 'left', // one of: ['up','down','left','right']
-    taunt: 'Outta my way, snake!', // optional, but encouraged!
+    taunt: 'Move ssssnakesssss, get out the way!', // optional, but encouraged!
   }
 
   return response.json(data)
