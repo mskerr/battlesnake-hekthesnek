@@ -30,7 +30,7 @@ app.post('/start', (request, response) => {
 
   // Response data
   const data = {
-    color: '#DFFF00',
+    color: '#f4a442',
     head_url: 'http://www.placecage.com/c/200/200', // optional, but encouraged!
     taunt: "Gonna eat you ssssssuckers!", // optional, but encouraged!
   }
