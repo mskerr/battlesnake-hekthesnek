@@ -44,9 +44,9 @@ app.post('/move', (request, response) => {
   // NOTE: Do something here to generate your move
 
 
-var data = bottle.request.json;
+var data = request.json();
 
-function choice(data) {
+var try =function choice(data) {
 
 
 boardWidth = data.get('width');
@@ -92,7 +92,7 @@ let k = 1;
 }
   // Response data
   const data = {
-    move: choice(data), // one of: ['up','down','left','right']
+    move: try, // one of: ['up','down','left','right']
     taunt: 'Hiss hiss, motherfuckers!', // optional, but encouraged!
   }
 
