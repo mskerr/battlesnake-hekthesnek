@@ -44,7 +44,7 @@ app.post('/move', (request, response) => {
   // NOTE: Do something here to generate your move
 
 
-var data = request.json();
+/*var data = request.json();
 
 var try =function choice(data) {
 
@@ -89,10 +89,10 @@ let k = 1;
 	}
 	k = k + 2;
 }
-}
+}*/
   // Response data
   const data = {
-    move: try, // one of: ['up','down','left','right']
+    move: 'right', // one of: ['up','down','left','right']
     taunt: 'Hiss hiss, motherfuckers!', // optional, but encouraged!
   }
 
