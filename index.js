@@ -25,13 +25,11 @@ app.use(poweredByHandler)
 app.post('/start', (request, response) => {
   // NOTE: Do something here to start the game
 	
-	// add in image
-	// https://upload.wikimedia.org/wikipedia/commons/f/f2/Citrus_reticulata.jpg
 
   // Response data
   const data = {
     color: '#f4a442',
-    head_url: 'http://www.placecage.com/c/200/200', // optional, but encouraged!
+    head_url: 'https://upload.wikimedia.org/wikipedia/commons/f/f2/Citrus_reticulata.jpg', // optional, but encouraged!
     taunt: "Gonna eat you ssssssuckers!", // optional, but encouraged!
   }
 
