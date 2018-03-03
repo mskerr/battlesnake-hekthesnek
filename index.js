@@ -30,8 +30,8 @@ app.post('/start', (request, response) => {
 
   // Response data
   const data = {
-    color: '#DFFF00',
-    head_url: 'http://www.placecage.com/c/200/200', // optional, but encouraged!
+    color: '#F4A442',
+    head_url: 'https://upload.wikimedia.org/wikipedia/commons/f/f2/Citrus_reticulata.jpg', // optional, but encouraged!
     taunt: "Gonna eat you ssssssuckers!", // optional, but encouraged!
   }
 
@@ -108,7 +108,7 @@ let k = 1;
   // Response data
   const data = {
     move: test, // one of: ['up','down','left','right']
-    taunt: 'Hiss hiss, motherfuckers!', // optional, but encouraged!
+    taunt: 'Get forked!', // optional, but encouraged!
   }
 
   return response.json(data)
