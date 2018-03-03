@@ -44,8 +44,23 @@ app.post('/move', (request, response) => {
   // NOTE: Do something here to generate your move
 
 
-var data = request.json();
-
+//var data = request.json();
+var rand = function(){
+	var pick = Math.floor(Math.random()*4)+1;
+	if (pick === 1){
+		return "right";
+	}
+	if (pick === 2){
+		return "down";
+	}
+	if (pick === 3){
+		return "up";
+	}
+	if (pick === 4){
+		return "left";
+	}
+}
+/*
 var try =function choice(data) {
 
 
@@ -73,7 +88,7 @@ while(data[k].body!=null){
 	}
 	k++;
 }
-*/
+*//*
 for(let i = 0; i < dontMove.length();i+2){
 let k = 1;
 	if(usX != boardWidth){
@@ -90,10 +105,12 @@ let k = 1;
 	}
 	k = k + 2;
 }
+	
 }
+	 */
   // Response data
   const data = {
-    move: try, // one of: ['up','down','left','right']
+    move: rand, // one of: ['up','down','left','right']
     taunt: 'Hiss hiss, motherfuckers!', // optional, but encouraged!
   }
 
