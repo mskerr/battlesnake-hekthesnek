@@ -40,10 +40,9 @@ app.post('/move', (request, response) => {
   // NOTE: Do something here to generate your move
 
   // Response data
-  const data = {
-    randomMove = Math.floor(Math.random() * (4-1)) + 1)
-  }
-    switch (randomMove) {
+  move = function generateMove() {
+
+  switch (Math.floor(Math.random() * (4-1)) + 1)) {
     case 1:
         move: 'up'
         break;
@@ -59,6 +58,10 @@ app.post('/move', (request, response) => {
       default:
     move: 'left', // one of: ['up','down','left','right']
 
+  }
+
+  const data = {
+    move
   }
     taunt: 'Move ssssnakesssss, get out the way!', // optional, but encouraged!
   return response.json(data)
