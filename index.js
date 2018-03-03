@@ -40,14 +40,14 @@ app.post('/move', (request, response) => {
   // NOTE: Do something here to generate your move
 
   // Response data
-
   const data = {
-    move: 'left'
-  
-    taunt: 'Move ssssnakesssss, get out the way!', // optional, but encouraged!
+    move: 'up', // one of: ['up','down','left','right']
+    taunt: 'Outta my way, snake!', // optional, but encouraged!
   }
+
   return response.json(data)
 })
+
 
 // --- SNAKE LOGIC GOES ABOVE THIS LINE ---
 
