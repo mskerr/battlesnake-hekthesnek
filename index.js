@@ -25,11 +25,13 @@ app.use(poweredByHandler)
 app.post('/start', (request, response) => {
   // NOTE: Do something here to start the game
 	
+	// add in image
+	// https://upload.wikimedia.org/wikipedia/commons/f/f2/Citrus_reticulata.jpg
 
   // Response data
   const data = {
-    color: '#f4a442',
-    head_url: 'https://upload.wikimedia.org/wikipedia/commons/f/f2/Citrus_reticulata.jpg', // optional, but encouraged!
+    color: '#DFFF00',
+    head_url: 'http://www.placecage.com/c/200/200', // optional, but encouraged!
     taunt: "Gonna eat you ssssssuckers!", // optional, but encouraged!
   }
 
@@ -40,26 +42,25 @@ app.post('/start', (request, response) => {
 // Handle POST request to '/move'
 app.post('/move', (request, response) => {
   // NOTE: Do something here to generate your move
+var test = function(){ Math.floor(Math.random() * 4);
 
-
-//var data = request.json();
-var rand = function(){
-	var pick = Math.floor(Math.random()*4)+1;
-	if (pick === 1){
-		return "right";
-	}
-	if (pick === 2){
-		return "down";
-	}
-	if (pick === 3){
-		return "up";
-	}
-	if (pick === 4){
+	if(test===0){
 		return "left";
 	}
-}
+	if(test===1){
+		return "up";	
+	}
+	if(test===2){
+		return "right";
+	}
+	if(test===3){
+		return "down";	
+	}
+	}
 /*
-var try =function choice(data) {
+var data = bottle.request.json;
+
+function choice(data) {
 
 
 boardWidth = data.get('width');
@@ -72,7 +73,7 @@ var dontMove;
 var usX;
 var usY;
 
-/*while(data[i].body!=null){
+while(data[i].body!=null){
 	dontMove[i]=data[1].body.data[i]x;
 	dontMove[x]=data[2].body.data[x]y;
 	x=x+2;
@@ -84,32 +85,30 @@ while(data[k].body!=null){
 	usY = data[k].body.data[0]y;
 	usX = data[k].body.data[0]x;
 	}
-	k++;
 }
-*//*
+
 for(let i = 0; i < dontMove.length();i+2){
 let k = 1;
-	if(usX != boardWidth){
+	if(usX + 1 != dontMove[i]&&usX != boardWidth){
 		return "right";
 	}
-	if(usY != boardHeight){
+	if(usY + 1 != dontMove[k]&&usY != boardHeight){
 		return "down";
 	}
-	if(usX != 0){
+	if(usX - 1 != dontMove[i]&&usX != 0){
 		return "left";
 	}
-	if(usY != 0){
+	if(usY - 1 != dontMove[i]&&usY != 0){
 		return "up";
 	}
 	k = k + 2;
 }
-	
 }
-	 */
+*/
   // Response data
   const data = {
-    move: rand, // one of: ['up','down','left','right']
-    taunt: 'Get forked!', // optional, but encouraged!
+    move: test, // one of: ['up','down','left','right']
+    taunt: 'Hiss hiss, motherfuckers!', // optional, but encouraged!
   }
 
   return response.json(data)
