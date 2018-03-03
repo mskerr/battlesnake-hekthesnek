@@ -111,7 +111,7 @@ let k = 1;
   // Response data
   const data = {
     move: rand, // one of: ['up','down','left','right']
-    taunt: 'Hiss hiss, motherfuckers!', // optional, but encouraged!
+    taunt: 'Get forked!', // optional, but encouraged!
   }
 
   return response.json(data)
