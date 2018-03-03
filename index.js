@@ -44,7 +44,7 @@ app.post('/move', (request, response) => {
   // NOTE: Do something here to generate your move
 
 
-/*var data = request.json();
+var data = request.json();
 
 var try =function choice(data) {
 
@@ -59,7 +59,7 @@ var dontMove;
 var usX;
 var usY;
 
-while(data[i].body!=null){
+/*while(data[i].body!=null){
 	dontMove[i]=data[1].body.data[i]x;
 	dontMove[x]=data[2].body.data[x]y;
 	x=x+2;
@@ -71,28 +71,29 @@ while(data[k].body!=null){
 	usY = data[k].body.data[0]y;
 	usX = data[k].body.data[0]x;
 	}
+	k++;
 }
-
+*/
 for(let i = 0; i < dontMove.length();i+2){
 let k = 1;
-	if(usX + 1 != dontMove[i]&&usX != boardWidth){
+	if(usX != boardWidth){
 		return "right";
 	}
-	if(usY + 1 != dontMove[k]&&usY != boardHeight){
+	if(usY != boardHeight){
 		return "down";
 	}
-	if(usX - 1 != dontMove[i]&&usX != 0){
+	if(usX != 0){
 		return "left";
 	}
-	if(usY - 1 != dontMove[i]&&usY != 0){
+	if(usY != 0){
 		return "up";
 	}
 	k = k + 2;
 }
-}*/
+}
   // Response data
   const data = {
-    move: 'right', // one of: ['up','down','left','right']
+    move: try, // one of: ['up','down','left','right']
     taunt: 'Hiss hiss, motherfuckers!', // optional, but encouraged!
   }
 
