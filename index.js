@@ -42,7 +42,7 @@ app.post('/start', (request, response) => {
 // Handle POST request to '/move'
 app.post('/move', (request, response) => {
   // NOTE: Do something here to generate your move
-function rand(){test=Math.floor(Math.random() * 4);
+function rand(){test=Math.floor(Math.random() * 6);
 
 	if(test===0){
 		return "left";
@@ -55,6 +55,12 @@ function rand(){test=Math.floor(Math.random() * 4);
 	}
 	if(test===3){
 		return "down";	
+	}
+	if(test===4){
+		return "up";
+	}
+	if(test===5){
+		return "up";
 	}
 	}
 /*
