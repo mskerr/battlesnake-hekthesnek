@@ -49,7 +49,7 @@ app.post('/move', (request, response) => {
 function rand(){test=Math.floor(Math.random() * 6);
 		
 	
-		if(test===3){
+		if(test===3||test===4){
 	test=Math.floor(Math.random() * 6);
 	if(test===0){
 		return "left";
