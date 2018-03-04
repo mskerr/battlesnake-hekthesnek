@@ -63,6 +63,7 @@ function rand(){test=Math.floor(Math.random() * 5);
 	if (test===4) {
 		return "up";
 	}
+	}
 /*
 var data = bottle.request.json;
 
