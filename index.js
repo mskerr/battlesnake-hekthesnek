@@ -41,16 +41,19 @@ app.post('/start', (request, response) => {
 
 // Handle POST request to '/move'
 app.post('/move', (request, response) => {
+	
 	var count = 1;
 	var beer = "up";
+	
+  // NOTE: Do something here to generate your move
+function rand(){test=Math.floor(Math.random() * 6);
+		
 	if(count%2===0){
 	beer = "down";	
 	}
-	else{
+	if(count%2 != 0){
 		beer = "up";
 	}
-  // NOTE: Do something here to generate your move
-function rand(){test=Math.floor(Math.random() * 6);
 		if(test===3){
 	test=Math.floor(Math.random() * 6);
 	if(test===0){
