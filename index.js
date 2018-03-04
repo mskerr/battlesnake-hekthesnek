@@ -42,29 +42,20 @@ app.post('/start', (request, response) => {
 // Handle POST request to '/move'
 app.post('/move', (request, response) => {
   // NOTE: Do something here to generate your move
-	
-foodPoints = [];
-foodPoints[] = req.body.food.data;
-
-
-	var test = function(){ 
-	Math.floor(Math.random() * 4);
+function rand(){test=Math.floor(Math.random() * 4);
 
 	if(test===0){
-		returnMove = "left";
-		break;
+		return "left";
 	}
 	if(test===1){
-		returnMove  = "up";
-		break;
+		return "up";	
 	}
 	if(test===2){
-		returnMove = "right";
+		return "right";
 	}
 	if(test===3){
-		returnMove = "down";	
+		return "down";	
 	}
-		      return returnMove;
 	}
 /*
 var data = bottle.request.json;
@@ -116,7 +107,7 @@ let k = 1;
 */
   // Response data
   const data = {
-    move: test, // one of: ['up','down','left','right']
+    move: rand, // one of: ['up','down','left','right']
     taunt: 'Get forked!', // optional, but encouraged!
   }
 
