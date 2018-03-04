@@ -46,7 +46,7 @@ app.post('/move', (request, response) => {
 foodPoints = [];
 
 foodPoints[] = req.body.food.data;
-function rand(){test=Math.floor(Math.random() * 4);
+function rand(){test=Math.floor(Math.random() * 5);
 
 	if(test===0){
 		return "left";
