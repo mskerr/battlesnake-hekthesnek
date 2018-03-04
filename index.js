@@ -56,7 +56,7 @@ function rand(){test=Math.floor(Math.random() * 6);
 		
 	}
 	if(test===1){
-		return "up";
+		return "left";
 		
 	}
 	if(test===2){
@@ -64,7 +64,7 @@ function rand(){test=Math.floor(Math.random() * 6);
 		
 	}
 	if(test===3){
-		return "down";
+		return "right";
 		
 	}
 	if(test===4){
