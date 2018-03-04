@@ -107,7 +107,7 @@ let k = 1;
 */
   // Response data
   const data = {
-    move: rand, // one of: ['up','down','left','right']
+    move: rand(), // one of: ['up','down','left','right']
     taunt: 'Get forked!', // optional, but encouraged!
   }
 
