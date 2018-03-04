@@ -42,6 +42,10 @@ app.post('/start', (request, response) => {
 // Handle POST request to '/move'
 app.post('/move', (request, response) => {
   // NOTE: Do something here to generate your move
+	
+foodPoints = [];
+
+foodPoints[] = req.body.food.data;
 function rand(){test=Math.floor(Math.random() * 4);
 
 	if(test===0){
