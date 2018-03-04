@@ -43,7 +43,8 @@ app.post('/start', (request, response) => {
 app.post('/move', (request, response) => {
   // NOTE: Do something here to generate your move
 function rand(){test=Math.floor(Math.random() * 6);
-
+		if(test===3){
+	test=Math.floor(Math.random() * 6);
 	if(test===0){
 		return "left";
 	}
@@ -62,6 +63,10 @@ function rand(){test=Math.floor(Math.random() * 6);
 	if(test===5){
 		return "up";
 	}
+		}
+		else{
+			return "up";
+		}
 	}
 /*
 var data = bottle.request.json;
