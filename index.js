@@ -41,31 +41,45 @@ app.post('/start', (request, response) => {
 
 // Handle POST request to '/move'
 app.post('/move', (request, response) => {
+	var count = 1;
+	var beer = "up";
+	if(count%2===0){
+	beer = "down";	
+	}
+	else{
+		beer = "up";
+	}
   // NOTE: Do something here to generate your move
 function rand(){test=Math.floor(Math.random() * 6);
 		if(test===3){
 	test=Math.floor(Math.random() * 6);
 	if(test===0){
 		return "left";
+		count ++;
 	}
 	if(test===1){
-		return "up";	
+		return "up";
+		count++;
 	}
 	if(test===2){
 		return "right";
+		count++
 	}
 	if(test===3){
-		return "down";	
+		return "down";
+		count++;
 	}
 	if(test===4){
 		return "up";
+		count++;
 	}
 	if(test===5){
 		return "up";
+		count++
 	}
 		}
 		else{
-			return "up";
+			return beer;
 		}
 	}
 /*
