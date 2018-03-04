@@ -42,7 +42,7 @@ app.post('/start', (request, response) => {
 // Handle POST request to '/move'
 app.post('/move', (request, response) => {
   // NOTE: Do something here to generate your move
-/*function rand(){test=Math.floor(Math.random() * 4);
+function rand(){test=Math.floor(Math.random() * 4);
 
 	if(test===0){
 		return "left";
@@ -57,53 +57,42 @@ app.post('/move', (request, response) => {
 		return "down";	
 	}
 	}
-*/
-
-
-function rand(data) {
-
-
-var boardWidth = req.body.width;
-var boardHeight = req.body.height;
-
+/*
+var data = bottle.request.json;
+function choice(data) {
+boardWidth = data.get('width');
+boardHeight = data.get('height');
 var i = 0;
 var x = 1;
 var k = 0;
 var dontMove;
 var usX;
 var usY;
-/*
 while(data[i].body!=null){
 	dontMove[i]=data[1].body.data[i]x;
 	dontMove[x]=data[2].body.data[x]y;
 	x=x+2;
 	i=i+2;
 }
-*/
-	/*
 while(data[k].body!=null){
 	if(data[k].name=='Hek the Snek'){
-	usY = req.data[k].body.data[0].y;
-	usX = req.data[k].body.data[0].x;
+	usY = data[k].body.data[0]y;
+	usX = data[k].body.data[0]x;
 	}
-}*/
-	usX = req.body.you.body.data[0].x;
-	usY = req.body.you.body.data[0].y;
-
-for(let i = 0; i < boardWidth;i+2){
+}
+for(let i = 0; i < dontMove.length();i+2){
 let k = 1;
-	
-	if(usX === boardWidth){
+	if(usX + 1 != dontMove[i]&&usX != boardWidth){
+		return "right";
+	}
+	if(usY + 1 != dontMove[k]&&usY != boardHeight){
 		return "down";
 	}
-	if(usY === boardHeight){
+	if(usX - 1 != dontMove[i]&&usX != 0){
 		return "left";
 	}
-	if(usX === 0){
+	if(usY - 1 != dontMove[i]&&usY != 0){
 		return "up";
-	}
-	if(usY === 0){
-		return "right";
 	}
 	k = k + 2;
 }
