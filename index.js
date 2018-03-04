@@ -48,8 +48,8 @@ app.post('/move', (request, response) => {
   // NOTE: Do something here to generate your move
 function rand(){test=Math.floor(Math.random() * 6);
 		
-	var beer = "up";
-	if(count%2===0){
+	var beer;
+	if(count%2==0){
 	beer = "down";	
 	}
 	if(count%2 != 0){
