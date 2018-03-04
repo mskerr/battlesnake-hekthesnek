@@ -60,6 +60,8 @@ function rand(){test=Math.floor(Math.random() * 4);
 	if(test===3){
 		return "down";	
 	}
+	if (test===4) {
+		return "up";
 	}
 /*
 var data = bottle.request.json;
